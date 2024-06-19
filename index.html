@@ -1,0 +1,65 @@
+<!DOCTYPE html />
+<html>
+
+<head>
+	<link rel="stylesheet" href="index.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap" rel="stylesheet" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<title>Pet Pics</title>
+</head>
+
+<body>
+	<header>
+		<div class="header-inner">
+			
+			<img src="./media/arlo-peaking-in.png" class="logo-img" />
+			
+			<div>
+				<h2>Arlo's Automatic</h2>
+				<h1>Pet Pic Picker</h1>
+			</div>
+			
+		</div>
+	</header>
+	<main>
+		<h3>Select Your Pet's Name</h3>
+		
+		<form class="controls-container">
+			
+			<div class="emotion-radios" id="emotion-radios"></div>
+			
+			<section class="checkboxes-container">
+				<div class="checkbox">
+					
+					<label for="gifs-only-option" class="checkbox-label">Animated GIFs only</label>
+					<input type="checkbox" id="gifs-only-option">
+					
+				</div>
+				
+				<div class="checkbox">
+
+					<label for="show-all-option" class="checkbox-label">Show All Images</label>
+					<input type="checkbox" id="show-all-option">
+					
+				</div>
+			</section>
+			
+			<button class="get-image-btn" id="get-image-btn" disabled>Get Image</button>
+			
+		</form>
+	</main>
+		<div class="meme-modal" id="meme-modal">
+			
+			<button class="meme-modal-close-btn" id="meme-modal-close-btn">X</button>
+			<div id="meme-modal-inner"></div>
+			
+		</div>
+		
+	<script src="index.js" type="module"></script>
+</body>
+
+</html>

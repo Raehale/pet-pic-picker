@@ -1,0 +1,231 @@
+html, body {
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    background-color: #FDF4ED;
+}
+
+/*typography*/
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1, h2 {
+    color: #f8edeb;
+    
+    margin: 0;
+}
+
+h1 {
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    margin: 25px;
+}
+
+/* layout */
+/***HEADER***/
+header {
+    background-color: #FFCCC2;
+    border-bottom: 5px solid #FEC89A;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+
+    width: 370px;
+    
+    padding: 10px 0 0 0;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.logo-img {
+    width: 80px;
+}
+
+.controls-container {
+    display: flex;
+    flex-direction: column;
+    
+    width: 200px;
+    
+    margin: 0px auto;
+}
+
+/***RADIO BUTTON LIST*/
+.emotion-radios {
+    display: flex;
+    flex-direction: column;
+    
+    border: 1px solid #bcbcbc;
+    border-radius: 5px;
+}
+
+.radio {
+    background-color: #FBE8DA;
+    display: flex;
+    align-items: center;
+    
+    border-bottom: 1px solid #bcbcbc;
+    padding: 4px 8px;
+}
+
+.radio:hover {
+    background-color: #FDF4ED;
+}
+
+.radio:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.radio:last-child {
+    border-bottom: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+label {
+    font-size: 14px;
+    
+    width: 100%;
+
+    padding: 3px;
+
+    cursor: pointer;
+}
+
+/**ACTIVE RADIO**/
+.highlight {
+    background-color: #FCD5CE;
+    color: #FF8870;
+    
+    font-weight: bold;
+    accent-color: #FF8870;
+}
+
+input[type="radio"] {
+    cursor: pointer;
+}
+
+/***CHECKBOXS***/
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox:first-child {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.checkbox:last-child {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.checkbox-label {
+    width: unset;
+    
+    margin-right: 5px;
+}
+
+/***BUTTONS**/
+.get-image-btn {
+    font-size: 24px;
+    background-color: #FE9D48;
+    color: #FDF4ED;
+    
+    padding: 15px 19px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.get-image-btn:hover,
+.get-image-btn:active {
+    background-color: #FDF4ED;
+    color: #FE9D48;
+    
+    cursor: pointer;
+}
+
+/*DISABLED*/
+.get-image-btn:disabled {
+    background-color: #FEC89A;
+}
+
+.get-image-btn:disabled:hover,
+.get-image-btn:disabled:active {
+    background-color: #FEC89A;
+    color: #FDF4ED;
+    
+    cursor: not-allowed;
+}
+
+/***MODAL***/
+.meme-modal {
+    background-color: #fff0ee;
+
+    display: none; /*flex when displayed*/
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+
+    width: 420px;
+    height: 490px;
+
+    top: 80px;
+    left: 0;
+    right: 0;
+        
+    border: 1px solid #67595e;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.images-gallary {
+    display: flex;
+}
+
+.images-gallary .cat-img {
+    max-width: 100px;
+    max-height: auto;
+}
+
+.cat-img {
+    max-width: 340px;
+    max-height: 420px;
+    
+    border-radius: 5px;
+}
+
+.meme-modal-close-btn {
+    font-size: 14px;
+    background-color: transparent;
+    color: #555;
+
+    position: absolute;
+    
+    top: 2%;
+    right: 2%;
+    
+    padding: 2px 6px;
+    border: 2px solid #555;
+    border-radius: 50%;
+}
+
+.meme-modal-close-btn:hover {
+    color: white;
+    background-color: #bd301d;
+    
+    border: 2px solid #bd301d;
+}
