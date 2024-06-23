@@ -118,7 +118,7 @@ export const petsData = [
     {
         imageTags: ["Jasper", "Arlo"],
         isGif: false,
-        image: "Jasper-2.jpg",
+        image: "Jasper-and-Arlo-1.jpg",
         alt: "A black and white cat laying next to a small black dog, laying on a green couch.",
         caption: "Arlo and Jasper sitting together for the first time.",
         indexId: 14,

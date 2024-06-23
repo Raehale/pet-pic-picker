@@ -6,60 +6,101 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap" rel="stylesheet" />
-	
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
+
 	<title>Pet Pics</title>
 </head>
 
 <body>
 	<header>
 		<div class="header-inner">
-			
+
 			<img src="./media/arlo-peaking-in.png" class="logo-img" />
-			
+
 			<div>
-				<h2>Arlo's Automatic</h2>
-				<h1>Pet Pic Picker</h1>
+				<h1>Arlo's Automatic</h1>
+				<h2>Pet Pic Picker</h2>
 			</div>
-			
+
 		</div>
 	</header>
 	<main>
+		<button class="btn add-img-btn" id="add-img-btn">Add Image</button>
+
 		<h3>Select Your Pet's Name</h3>
-		
-		<form class="controls-container">
+
+		<form class="controls-container" id="controls-container">
 			
 			<div class="emotion-radios" id="emotion-radios"></div>
-			
-			<section class="checkboxes-container">
+
+			<section class="checkboxes-container" id="checkboxes-container">
 				<div class="checkbox">
-					
+
 					<label for="gifs-only-option" class="checkbox-label">Animated GIFs only</label>
 					<input type="checkbox" id="gifs-only-option">
-					
+
 				</div>
-				
+
 				<div class="checkbox">
 
 					<label for="show-all-option" class="checkbox-label">Show All Images</label>
 					<input type="checkbox" id="show-all-option">
-					
+
 				</div>
 			</section>
-			
-			<button class="get-image-btn" id="get-image-btn" disabled>Get Image</button>
-			
+
+			<button class="btn" type="button" id="get-image-btn" disabled>Get Image</button>
+
 		</form>
 	</main>
-		<div class="meme-modal" id="meme-modal">
-			
-			<button class="meme-modal-close-btn" id="meme-modal-close-btn">X</button>
-			<div id="meme-modal-inner"></div>
-			
+
+	<div class="image-modal" id="image-modal">
+
+		<div class="image-modal-header" id="image-modal-header">
+			<button class="image-modal-back-btn" id="image-modal-back-btn">&lt;</button>
+			<button class="image-modal-close-btn" id="image-modal-close-btn">X</button>
+			<h3 id="image-modal-title"></h3>
 		</div>
+
+		<div id="image-image-modal-inner" class="image-modal-inner"></div>
+
+	</div>
+
+	<div class="upload-modal" id="upload-modal">
+
+		<div class="upload-modal-header" id="upload-modal-header">
+			<button class="upload-modal-close-btn" id="upload-modal-close-btn">X</button>
+			<h3 id="upload-modal-title">Upload Your Image</h3>
+		</div>
+
+		<div id="upload-image-modal-inner" class="upload-modal-inner">
+			<form class="upload-form">
+				<label for="img-upload-input">Select Image</label>
+				<input type="file" id="img-upload-input" name="img-upload-input" />
+
+				<label for="alt-text-input">Alt Text for Image</label>
+				<input type="text" id="alt-text-input" name="alt-text-input" />
+
+				<label for="caption-input">Caption for Image</label>
+				<input type="text" id="caption-input" name="caption-input" />
+
+				<label for="tags-input">Image Tags (whose in it, separate by comma)</label>
+				<input type="text" id="tags-input" name="tags-input" />
+
+				<button type="submit" class="btn">Add Image</button>
+			</form>
+		</div>
+
+	</div>
 		
 	<script src="index.js" type="module"></script>
 </body>
 
 </html>
+
+<!-- when you load one image if you click the image it loads the back button if you have loaded a multi image prev -->
+<!-- need to add gif and test gif thing -->
+<!-- get caption to show when image is selected -->
+<!-- only show big single image if only one image exists -->
+<!-- get upload functionality to work -->

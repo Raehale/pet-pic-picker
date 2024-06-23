@@ -50,13 +50,41 @@ header {
     width: 80px;
 }
 
+/***MAIN BODY***/
+main {
+    flex-direction: column;
+
+    width: 300px;
+
+    margin: 0px auto;
+}
+
 .controls-container {
     display: flex;
     flex-direction: column;
-    
-    width: 200px;
-    
-    margin: 0px auto;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-form label {
+    color: #333;
+    font-size: 16px;
+}
+
+.upload-form input {
+    margin-bottom: 5%;
+}
+
+.upload-form input[type="text"] {
+    background-color: #F8EDEB;
+    color: #D56048;
+
+    padding: 2.5% 5%;
+    border: 2px solid #FCD5CE;
+    border-radius: 5px;
 }
 
 /***RADIO BUTTON LIST*/
@@ -94,7 +122,7 @@ header {
 
 label {
     font-size: 14px;
-    
+
     width: 100%;
 
     padding: 3px;
@@ -106,7 +134,7 @@ label {
 .highlight {
     background-color: #FCD5CE;
     color: #FF8870;
-    
+
     font-weight: bold;
     accent-color: #FF8870;
 }
@@ -122,6 +150,10 @@ input[type="radio"] {
     justify-content: center;
 }
 
+input[type='checkbox'] {
+    accent-color: #FF8870;
+}
+
 .checkbox:first-child {
     margin-top: 16px;
     margin-bottom: 8px;
@@ -134,12 +166,17 @@ input[type="radio"] {
 
 .checkbox-label {
     width: unset;
-    
+
     margin-right: 5px;
 }
 
+.highlight-checkbox {
+    color: #D56048;
+    font-weight: bold;
+}
+
 /***BUTTONS**/
-.get-image-btn {
+.btn {
     font-size: 24px;
     background-color: #FE9D48;
     color: #FDF4ED;
@@ -150,82 +187,152 @@ input[type="radio"] {
     margin-bottom: 8px;
 }
 
-.get-image-btn:hover,
-.get-image-btn:active {
-    background-color: #FDF4ED;
-    color: #FE9D48;
+.btn:hover,
+.btn:focus,
+.btn:active {
+    background-color: #D56048       ;
+    color: #FCD5CE;
     
     cursor: pointer;
 }
 
 /*DISABLED*/
-.get-image-btn:disabled {
+.btn:disabled {
     background-color: #FEC89A;
 }
 
-.get-image-btn:disabled:hover,
-.get-image-btn:disabled:active {
+.btn:disabled:hover,
+.btn:disabled:active {
     background-color: #FEC89A;
     color: #FDF4ED;
     
     cursor: not-allowed;
 }
+/*ADD IMAGE BUTTON*/
+.add-img-btn {
+    width: 100%;
+
+    margin-top: 5%;
+}
 
 /***MODAL***/
-.meme-modal {
+.image-modal,
+.upload-modal {
     background-color: #fff0ee;
 
     display: none; /*flex when displayed*/
     position: fixed;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 
     width: 420px;
-    height: 490px;
+    min-height: 490px;
 
-    top: 80px;
+    top: 100px;
     left: 0;
     right: 0;
         
-    border: 1px solid #67595e;
+    border: 4px solid #FFB5A7;
     border-radius: 5px;
     margin: auto;
 }
 
-.images-gallary {
-    display: flex;
+.image-modal-header,
+.upload-modal-header {
+    background-color: #FFB5A7;
 }
 
-.images-gallary .cat-img {
-    max-width: 100px;
-    max-height: auto;
+.image-modal-header h3,
+.upload-modal-header h3 {
+    color: #D56048;
 }
 
-.cat-img {
-    max-width: 340px;
-    max-height: 420px;
-    
-    border-radius: 5px;
-}
-
-.meme-modal-close-btn {
+.image-modal-close-btn,
+.upload-modal-close-btn {
     font-size: 14px;
     background-color: transparent;
-    color: #555;
+    color: #D56048;
 
     position: absolute;
-    
+
     top: 2%;
     right: 2%;
-    
+
     padding: 2px 6px;
-    border: 2px solid #555;
+    border: 2px solid #D56048;
     border-radius: 50%;
 }
 
-.meme-modal-close-btn:hover {
+.image-modal-back-btn,
+.upload-modal-back-btn {
+    display: none;
+
+    font-size: 14px;
+    background-color: transparent;
+    color: #D56048;
+
+    position: absolute;
+
+    top: 2%;
+    left: 2%;
+
+    padding: 2px 6px;
+    border: 2px solid #D56048;
+    border-radius: 50%;
+}
+
+.image-modal-back-btn:hover,
+.image-modal-close-btn:hover,
+.upload-modal-back-btn:hover,
+.upload-modal-close-btn:hover {
     color: white;
-    background-color: #bd301d;
-    
-    border: 2px solid #bd301d;
+    background-color: #D56048;
+
+    cursor: pointer;
+}
+
+.image-modal-inner,
+.upload-modal-inner {
+    margin: 5%;
+}
+
+.pet-img {
+    max-width: 80%;
+
+    border: 4px solid #FE9D48;
+    border-radius: 5px;
+    margin: 0% 9.1%;
+}
+
+.pet-img-caption {
+    text-align: center;
+    font-weight: bold;
+    color: #D56048;
+}
+
+.images-gallary {
+    display: flex;
+    flex-wrap: wrap;
+
+    overflow-y: auto;
+    scrollbar-color: #FEC89A #F9DCC4;
+}
+
+.images-gallary .pet-img {
+    width: 25%;
+
+    margin: 5% 3.1%;
+}
+
+.images-gallary .pet-img:hover {
+    cursor: pointer;
+}
+
+.images-gallary .full-img {
+    width: 80%;
+
+    margin: 5% 9%;
+}
+
+.images-gallary .full-img:hover {
+    cursor: default;
 }
